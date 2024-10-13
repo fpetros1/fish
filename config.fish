@@ -1,4 +1,21 @@
 if status is-interactive
+    if test (uname) = Darwin
+        set -x JAVA_HOME "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home"
+        set -x LATEST_JAVA "/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home"
+        set -x M2_HOME "/opt/homebrew/opt/maven"
+        set -x DEV "$HOME/Dev"
+        set -x d "$DEV"
+
+        fish_add_path -a "/opt/homebrew/bin"
+        fish_add_path -a "/opt/homebrew/opt/node@20/bin"
+        fish_add_path -a "/usr/bin"
+        fish_add_path -a "/usr/local/bin"
+        fish_add_path -a "~/Scripts"
+
+        set LDFLAGS "-L/opt/homebrew/opt/node@20/lib"
+        set CPPFLAGS "-I/opt/homebrew/opt/node@20/include"
+    end
+
     zoxide init fish --cmd cd | source
 
     set fish_greeting
