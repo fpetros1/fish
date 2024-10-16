@@ -23,6 +23,7 @@ if status is-interactive
 
     set -Ux EDITOR 'nvim'
     set -Ux VISUAL 'launch-editor-gui'
+    set -gx SHELL $(which fish)
    
     alias ls="eza --icons=always --no-quotes -l"
     alias lsa="eza --icons=always --no-quotes -l -a"

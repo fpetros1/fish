@@ -1,7 +1,6 @@
 function fish_prompt
-    if begin; test -n "$TMUX"; end
+    if begin; test -n "$TMUX"; and test -z "$NVIM"; end
         echo -n (fish_vi_prompt)
-        #   echo -n (set_color yellow)'󰒊 '
         set_color normal
     else
         if test -n "$SSH_TTY"
