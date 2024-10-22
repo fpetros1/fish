@@ -81,6 +81,4 @@ if status is-interactive
             echo ''
         end
     end
-
-
 end
