@@ -23,6 +23,8 @@ if status is-interactive
 
     set -Ux EDITOR 'nvim'
     set -Ux VISUAL 'launch-editor-gui'
+    set -Ux BAT_THEME 'Eldritch'
+    set -Ux FZF_DEFAULT_OPTS '--color=fg:#ebfafa,bg:-1,hl:#37f499 --color=fg+:#ebfafa,bg+:#323449,hl+:#37f499 --color=info:#f7c67f,prompt:#04d1f9,pointer:#7081d0 --color=marker:#7081d0,spinner:#f7c67f,header:#323449'
     set -gx SHELL $(which fish)
    
     alias ls="eza --icons=always --no-quotes -l"
